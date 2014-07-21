@@ -15,7 +15,7 @@
       <td><label for="message">Enter your message:</label></td>
     </tr>
     <tr>
-      <td><textarea id="message" value="message"></textarea></td>
+      <td><textarea type="text" id="message" name="message"></textarea></td>
     </tr>
 
     <tr>
@@ -25,18 +25,19 @@
 
 </table>
 
-<table>
+<table border="1" style="width:300px">
+
   <tr>
     <td><p>Name</p></td>
     <td><p>Message</p></td>
   </tr>
   <% @messages.each do |message| %>
-  <tr>
-    <td><%= message["name"] %></td>
-    <td><%= message["message"] %></td>
-  </tr>
-    <% end %>
-    </table>
+    <tr>
+      <td><%= message["name"] %></td>
+      <td><%= message["message"] %></td>
+    </tr>
+  <% end %>
+</table>
 
 
 
