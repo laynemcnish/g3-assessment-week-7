@@ -2,3 +2,51 @@
 
 <p>We show totally accurate lists of continents and countries!!</p>
 
+<table>
+  <form action="/submit_message" method="post">
+    <tr>
+      <td><label for="name">Name:</label></td>
+    </tr>
+    <tr>
+      <td><input type="text" id="name" name="name"/></td>
+    </tr>
+
+    <tr>
+      <td><label for="message">Enter your message:</label></td>
+    </tr>
+    <tr>
+      <td><textarea id="message" value="message"></textarea></td>
+    </tr>
+
+    <tr>
+      <td><input type="submit" class="button" value="Add message"/></td>
+    </tr>
+  </form>
+
+</table>
+
+<table>
+  <tr>
+    <td><p>Name</p></td>
+    <td><p>Message</p></td>
+  </tr>
+  <% @messages.each do |message| %>
+  <tr>
+    <td><%= message["name"] %></td>
+    <td><%= message["message"] %></td>
+  </tr>
+    <% end %>
+    </table>
+
+
+
+<!--As a visitor-->
+<!--When I go to the home page-->
+<!--I see-->
+<!--* a name text field-->
+<!--* a message text field-->
+<!--* a submit button that says "Add Message"-->
+
+<!--When I click the button, I see my message appear beneath the message box.-->
+<!--It shows my message and my name.-->
+
